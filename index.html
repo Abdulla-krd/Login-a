@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Card Login & Register</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card" id="card3D">
+        <!-- Front: Login -->
+
+        <div class="face front">
+          
+          <h2>
+            <div class="circle"></div>
+            Login
+          </h2>
+
+          <form onsubmit="handleSubmit(event, true)">
+            <div class="input-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" placeholder="Enter username" />
+              <i class="fa-solid fa-user icon"></i>
+            </div>
+            
+            
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input
+              type="password"
+              id="password"
+              placeholder="Enter password"
+              />
+            
+              <i class="fa-solid fa-lock icon"></i>
+
+            </div>
+              
+
+            <button type="submit">Login</button>
+          </form>
+
+          <p id="errorLogin" class="error"></p>
+
+          <p class="toggle" onclick="flipCard()">Switch to Register</p>
+        </div>
+
+        <!-- Back: Register -->
+
+        <div class="face back">
+          
+          <h2>
+            <div class="circle"></div>
+            Register
+          </h2>
+
+          <form onsubmit="handleSubmit(event, false)">
+            <div class="input-group">
+              <label for="regUsername">Username</label>
+              <input
+              type="text"
+              id="regUsername"
+              placeholder="Enter username"
+              />
+              <i class="fa-solid fa-user icon"></i>
+              
+
+            </div>
+
+            <div class="input-group">
+              <label for="regEmail">Email</label>
+
+              <input
+                type="text"
+                id="regEmail"
+                placeholder="Enter Email"
+              />
+              <i class="fa-solid fa-envelope icon"></i>
+
+            </div>
+
+            <div class="input-group">
+              <label for="regPassword">Password</label>
+
+              <input
+                type="password"
+                id="regPassword"
+                placeholder="Enter password"
+              />
+              <i class="fa-solid fa-lock icon"></i>
+            </div>
+
+            <button type="submit">Register</button>
+          </form>
+
+          <p id="errorRegister" class="error"></p>
+
+          <p class="toggle change" onclick="flipCard()">Switch to Login</p>
+        </div>
+      </div>
+    </div>
+
+   
+    <script src="./app.js"></script>
+  </body>
+</html>

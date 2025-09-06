@@ -1,0 +1,159 @@
+body {
+  background-color: #ebe9e9;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  perspective: 1200px;
+}
+
+.card {
+  width: 400px;
+  height: 520px;
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease;
+  position: relative;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+h2 {
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  position: relative;
+  z-index: 1;
+
+}
+
+.circle {
+  background-color: #00BFFF;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  position: absolute;
+  top: -10px;
+  right: -8%;
+  z-index: -1;
+
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  width: 100%;
+  position: relative;
+
+}
+
+
+.input-group i{
+  font-size: 1.2rem;
+  position: absolute;
+  top: 60%;
+  left: 3%;
+  color: #555;
+  transform: translateY(1px);
+}
+input:focus ~i{
+  color: #4caf50;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 1.3rem;
+}
+
+
+input {
+  width: 100%;
+  padding: 1rem 1rem 0.8rem 2.5rem;
+  border: 2px solid #ccc;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+input:focus{
+  border-color: #4caf50;
+  outline: none;
+  
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: auto;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s;
+  margin-left: 30px;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: translatey(-5px);
+
+}
+
+.toggle {
+  margin-top: 1rem;
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 50px;
+
+}
+
+.change {
+  margin-top: 0rem;
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 30px;
+
+}
+
+.toggle:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
